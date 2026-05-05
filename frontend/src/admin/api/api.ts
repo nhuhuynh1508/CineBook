@@ -77,6 +77,7 @@ export const adminLogin = async (
 
   const data = await response.json();
   console.log("hello");
+  console.log("BASE_URL:", BASE_URL);
 
   if (!response.ok) {
     throw new Error(data.message || 'Login failed');
