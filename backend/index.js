@@ -17,7 +17,7 @@ dbconnect();
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://movie-ticket-booking-w348.vercel.app'],
+  origin: ['https://cinebook-o9jx.onrender.com', 'https://cine-book-coral.vercel.app'],
   credentials: true
 }));
 app.use(express.json());
@@ -41,6 +41,11 @@ app.use((err, req, res, next) => {
   });
 });
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the Movie Ticket Booking API');
+});
+
+
 // 404 handler
 app.use((req, res) => {
   logger.warn(`404 - ${req.originalUrl} - ${req.method} - ${req.ip}`);
@@ -51,6 +56,7 @@ app.use((req, res) => {
     }
   });
 });
+
 
 const port = process.env.PORT || 5050;
 
