@@ -41,7 +41,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.get('/', (req, res) => {
+app.use('/', (req, res) => {
   res.send('Welcome to the Movie Ticket Booking API');
 });
 
