@@ -27,7 +27,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/:id" element={<App />} />
+        
         <Route path="/user/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/booking/:id" element={<BookingPage />} />
@@ -43,6 +43,7 @@ createRoot(document.getElementById('root')!).render(
 
         <Route path="/dashboard/admin" element={<DashboardPage />} />
         <Route path="/admin/login" element={<LoginAdminPage />} />
+        <Route path="*" element={<App />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
