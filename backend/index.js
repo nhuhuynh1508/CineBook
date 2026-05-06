@@ -17,7 +17,7 @@ dbconnect();
 
 // Middleware
 app.use(cors({
-  origin: ['https://cinebook-o9jx.onrender.com', 'https://cine-book-coral.vercel.app'],
+  origin: ['https://cinebook-o9jx.onrender.com', 'https://loomcine.vercel.app'],
   credentials: true
 }));
 app.use(express.json());
