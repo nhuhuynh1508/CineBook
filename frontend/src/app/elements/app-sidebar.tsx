@@ -64,7 +64,7 @@ export default function AppSidebar() {
     <Sidebar>
       <SidebarContent className="bg-jet-black text-gray-300">
         <SidebarGroup>
-          {/* <SidebarGroupLabel className="text-lg mr-5 py-5">CineBook</SidebarGroupLabel> */}
+          {/* <SidebarGroupLabel className="text-lg mr-5 py-5">LoomCine</SidebarGroupLabel> */}
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (

@@ -27,7 +27,7 @@ export const Footer = () => {
             <div className="flex flex-col gap-2">
             <h4 className="font-semibold">ABOUT US</h4>
             <div className="flex-nowrap whitespace-nowrap space-x-6 text-gray-300 flex mt-3 font-poppins">
-                <Link to='/aboutus'>About CineBook</Link>
+                <Link to='/aboutus'>About LoomCine</Link>
                 <div>Media Releases</div>
                 <Link to='/faq'>FAQ</Link>
                 <div>Accessibility</div>
@@ -37,7 +37,7 @@ export const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-6 pt-4 pb-6 text-center text-gray-400 text-xs px-4">
-            <p>Copyright © 2025 CineBook. All Rights Reserved.</p>
+            <p>Copyright © 2025 LoomCine. All Rights Reserved.</p>
             
             <div className="flex justify-center flex-wrap items-center gap-x-2 mt-2 text-white underline">
                 <p className="mx-1">Terms & Conditions</p>

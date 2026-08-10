@@ -23,7 +23,7 @@ export default function LoginPage() {
                         <div className="flex items-center justify-center rounded-md font-bold">
                             <Film className="size-6" />
                         </div>
-                        <span className="font-bold">CineBook</span>
+                        <span className="font-bold">LoomCine</span>
                     </Link>
                 </div>
                 <div className="flex items-center justify-center">

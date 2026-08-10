@@ -57,7 +57,7 @@ export default function NewsUpdatesPage() {
         <div className="flex-1 flex flex-col p-6">
           <Link to={`/${id}`} className="flex items-center gap-2 mb-8">
             <Film className="h-10 w-10 text-red-600" />
-            <div className="text-3xl font-alfa text-red-500">CineBook</div>
+            <div className="text-3xl font-alfa text-red-500">LoomCine</div>
           </Link>
           <h1 className="text-3xl font-bold mb-6">News & Updates</h1>
           <ul className="space-y-6">

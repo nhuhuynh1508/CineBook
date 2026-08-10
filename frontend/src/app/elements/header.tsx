@@ -31,10 +31,10 @@ export const Header = () => {
             {/* Sidebar button */}
             <SidebarTrigger className="bg-gray-500 text-black px-2 py-2 rounded" />
 
-            {/* CineBook Logo Link */}
+            {/* LoomCine Logo Link */}
             <Link to={`/${id}`} className="flex items-center ml-5 gap-2">
                 <Film className="h-10 w-10 text-red-600" />
-                <div className="text-3xl pt-1 font-alfa text-red-500">CineBook</div>
+                <div className="text-3xl pt-1 font-alfa text-red-500">LoomCine</div>
             </Link>
 
             {/* Search Bar */}

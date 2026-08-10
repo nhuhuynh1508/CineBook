@@ -21,7 +21,7 @@ export default function SignupPage() {
                 <div className="flex h-6 w-6 items-center justify-center rounded-md bg-primary text-primary-foreground">
                 <Film className="size-4" />
                 </div>
-                <div className="font-bold">CineBook</div>
+                <div className="font-bold">LoomCine</div>
             </Link>
             </div>
             <div className="flex flex-1 items-center justify-center">

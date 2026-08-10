@@ -131,7 +131,7 @@ export default function CheckoutPage() {
       {/* Logo */}
       <a href="/" className="flex items-center gap-2 mb-8">
         <Film className="h-10 w-10 text-red-600" />
-        <div className="text-3xl font-alfa text-red-500">CineBook</div>
+        <div className="text-3xl font-alfa text-red-500">LoomCine</div>
       </a>
 
       {/* Ticket Summary */}
