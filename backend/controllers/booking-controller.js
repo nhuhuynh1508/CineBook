@@ -23,46 +23,27 @@ export const createBooking = async (req, res) => {
       return res.status(404).json({ message: "Showtime not found" });
     }
 
-    // Verify seats are available
-    // const seats = await Seat.find({ _id: { $in: seatIds } });
-    // if (seats.length !== seatIds.length) {
-    //   return res.status(400).json({ message: "Some seats are not available" });
-    // }
-
-    // Calculate total amount
+    // Calculate total amount starting with seats
     let totalAmount = 0;
-
     seats.forEach(seat => {
       totalAmount += seat.price;
     });
 
-    foodDrinks.forEach(order => {
-      if (order.item && order.quantity) {
-        const foodDrinkItem = FoodDrink.findById(order.item);
-        if (foodDrinkItem) {
-          totalAmount += foodDrinkItem.price * order.quantity;
-        } else {
-          return res.status(400).json({ message: `Food/Drink item with ID ${order.item} not found` });
-        }
-      } else {
-        return res.status(400).json({ message: "Invalid food/drink order format" });
-      }
-    });
-
-    console.log("Total Amount:", totalAmount);
-    
-
-    // Add food and drinks prices
+    // Add food and drinks prices (Using your optimized $in query)
     let foodDrinkDetails = [];
     if (foodDrinks && foodDrinks.length > 0) {
       const foodDrinkItems = await FoodDrink.find({
         _id: { $in: foodDrinks.map(item => item.item) }
       });
 
+      if (foodDrinkItems.length !== foodDrinks.length) {
+          return res.status(400).json({ message: "One or more food/drink items not found" });
+      }
+
       foodDrinkDetails = foodDrinks.map(order => {
         const item = foodDrinkItems.find(fd => fd._id.toString() === order.item);
         if (item) {
-          totalAmount += item.price * order.quantity;
+          totalAmount += item.price * order.quantity; 
           return {
             item: item._id,
             quantity: order.quantity,
@@ -71,6 +52,8 @@ export const createBooking = async (req, res) => {
         }
       }).filter(Boolean);
     }
+
+    console.log("Fixed Total Amount:", totalAmount);
 
     // Generate unique booking reference
     const bookingReference = `BK${uuidv4().slice(0, 8).toUpperCase()}`;
@@ -90,12 +73,6 @@ export const createBooking = async (req, res) => {
     });
 
     await booking.save();
-
-    // // Update seat status
-    // await Seat.updateMany(
-    //   { _id: { $in: seatIds } },
-    //   { $set: { isBooked: true } }
-    // );
 
     res.status(201).json({ booking });
   } catch (error) {
