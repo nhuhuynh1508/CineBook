@@ -17,8 +17,10 @@ dbconnect();
 
 // Middleware
 app.use(cors({
-  origin: ['https://cinebook-o9jx.onrender.com', 'https://loomcine.vercel.app'],
-  credentials: true
+  origin: [
+    'http://localhost:5173',
+    'https://loomcine.vercel.app'
+  ],
 }));
 app.use(express.json());
 
