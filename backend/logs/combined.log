@@ -398,3 +398,6 @@
 {"level":"info","message":"Server started on port 5000","service":"movie-booking-api","timestamp":"2026-08-10 15:53:20"}
 {"level":"info","message":"Database connected successfully","service":"movie-booking-api","timestamp":"2026-08-10 15:53:20"}
 {"level":"info","message":"MongoDB connected successfully","service":"movie-booking-api","timestamp":"2026-08-10 15:53:21"}
+{"level":"info","message":"Server started on port 5000","service":"movie-booking-api","timestamp":"2026-08-10 16:08:22"}
+{"level":"info","message":"Database connected successfully","service":"movie-booking-api","timestamp":"2026-08-10 16:08:22"}
+{"level":"info","message":"MongoDB connected successfully","service":"movie-booking-api","timestamp":"2026-08-10 16:08:23"}
